@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Paradise Nursery</h1>
+                <p>Where Green Meets Serenity</p>
+            </div>
+            <div class="cart-icon">
+                <span class="cart-count">0</span>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <h2>Total Cart Amount: <span class="total-amount">EGP 0</span></h2>
+        <div class="cart-items"></div>
+        <div class="cart-buttons">
+            <button onclick="window.location.href='product.html'" class="continue-shopping">Continue Shopping</button>
+            <button class="checkout">Checkout</button>
+        </div>
+    </main>
+
+    <script>
+        const cartCountElement = document.querySelector('.cart-count');
+        const totalAmountElement = document.querySelector('.total-amount');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const currencyFormatter = new Intl.NumberFormat('en-EG', { style: 'currency', currency: 'EGP' });
+
+        function updateCartCount() {
+            const totalItems = cart.reduce((count, item) => count + item.quantity, 0);
+            cartCountElement.textContent = totalItems;
+        }
+
+        function updateTotalAmount() {
+            const totalAmount = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            totalAmountElement.textContent = currencyFormatter.format(totalAmount);
+        }
+
+        function renderCartItems() {
+            cartItemsContainer.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                const productTotal = item.price * item.quantity;
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <h3>${item.name}</h3>
+                       <br>
+                        <p>Total: ${currencyFormatter.format(productTotal)}</p>
+                    </div>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity(${index})">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="increaseQuantity(${index})">+</button>
+                    </div>
+                    <button class="delete-btn" onclick="removeItem(${index})">Delete</button>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+
+            updateTotalAmount();
+            updateCartCount();
+        }
+
+        function increaseQuantity(index) {
+            cart[index].quantity++;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCartItems();
+        }
+
+        function decreaseQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                removeItem(index);
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCartItems();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCartItems();
+        }
+
+        updateCartCount();
+        renderCartItems();
+    </script>
+</body>
+</html>

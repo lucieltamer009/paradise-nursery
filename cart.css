@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    background-color: #4CAF50;
+    padding: 15px;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+i{
+    width: 15px;
+    color: white;
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-image {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    position: absolute;
+    right: 1px;
+    top: 23px;
+    margin-right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+
+/* Main Cart Section */
+.cart-main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-main h2 {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Cart Items */
+.cart-items {
+    margin: 20px 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.cart-item-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item-info .price {
+    color: #333;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    padding: 5px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cart Buttons */
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.continue-shopping, .checkout {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-shopping {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.checkout {
+    background-color: #333;
+    color: white;
+}

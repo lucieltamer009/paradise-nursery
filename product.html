@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing Page</title>
+    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        /* Additional CSS for better visual representation */
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+
+        .add-to-cart:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Paradise Nursery</h1>
+                <p>Where Green Meets Serenity</p>
+            </div>
+            <div class="cart-icon">
+                <span class="cart-count">0</span>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <h2>Air Purifying Plants</h2>
+            <br>
+            <hr>
+            <br>
+            <div class="product-grid">
+                <div class="product" data-product-id="1">
+                    <img src="https://images.unsplash.com/photo-1463154545680-d59320fd685d?q=80&w=1275&auto=format&fit=crop" alt="Snake Plant" class="product-image">
+                    <h3>Snake Plant</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 15</p>
+                    <p class="description">Produces oxygen at night, improving air quality.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-product-id="2">
+                    <img src="https://images.unsplash.com/photo-1502810365585-56ffa361fdde?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="pharetra ante." class="product-image">
+                    <h3>pharetra antet</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 65</p>
+                    <p class="description">Produces oxygen at night, improving air qualityeu dignissim elit molestie.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product" data-product-id="3">
+                    <img src="https://images.unsplash.com/photo-1545239705-1564e58b9e4a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fHBsYW50fGVufDB8fDB8fHww" alt="elementum risus" class="product-image">
+                    <h3>elementum risus</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 15</p>
+                    <p class="description">lity non ullamcorper velitnon ullamcorper velit</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div><div class="product" data-product-id="4">
+                    <img src="https://images.unsplash.com/photo-1463154545680-d59320fd685d?q=80&w=1275&auto=format&fit=crop" alt="Snake Plant" class="product-image">
+                    <h3>Snake Plant</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 15</p>
+                    <p class="description">Produces oxygen at night, improving air quality.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div><div class="product" data-product-id="5">
+                    <img src="https://images.unsplash.com/photo-1463154545680-d59320fd685d?q=80&w=1275&auto=format&fit=crop" alt="Snake Plant" class="product-image">
+                    <h3>Snake Plant</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 15</p>
+                    <p class="description">Produces oxygen at night, improving air quality.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product" data-product-id="6">
+                    <img src="https://images.unsplash.com/photo-1463154545680-d59320fd685d?q=80&w=1275&auto=format&fit=crop" alt="Snake Plant" class="product-image">
+                    <h3>fringilla turpis</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 115</p>
+                    <p class="description"> Donec eget hendrerit </p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product" data-product-id="7">
+                    <img src="https://images.unsplash.com/photo-1463154545680-d59320fd685d?q=80&w=1275&auto=format&fit=crop" alt="Vestibulum" class="product-image">
+                    <h3>Vestibulum ante</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 15</p>
+                    <p class="description">psum primis in faucibus orci.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div><div class="product" data-product-id="8">
+                    <img src="https://images.unsplash.com/photo-1463154545680-d59320fd685d?q=80&w=1275&auto=format&fit=crop" alt="Lorem ipsum dolor" class="product-image">
+                    <h3>Lorem ipsum dolor</h3>
+                    <span class="sale-tag">SALE</span>
+                    <p class="price">EGP 15</p>
+                    <p class="description"> Phasellus quis imperdiet nisl, et posuere dolor.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- More products can be added here -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize cart count on page load
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.querySelector('.cart-count').textContent = cart.reduce((total, item) => total + item.quantity, 0);
+        }
+
+        updateCartCount();
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        addToCartButtons.forEach((button) => {
+            button.addEventListener('click', function () {
+                const product = button.closest('.product');
+                const productId = product.dataset.productId;
+                const productName = product.querySelector('h3').textContent;
+                const productPrice = parseFloat(product.querySelector('.price').textContent.replace('EGP ', ''));
+                const productImage = product.querySelector('img').src;
+
+                const existingProduct = cart.find(item => item.id === productId);
+
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push({ id: productId, name: productName, price: productPrice, quantity: 1, image: productImage });
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+
+                // Update button text and style
+                button.textContent = "Added to Cart";
+                button.style.backgroundColor = "gray";
+                button.style.color = "white";
+                button.disabled = true;
+            });
+        });
+
+        // Check cart for existing products on page load
+        cart.forEach(item => {
+            const button = document.querySelector(`.product[data-product-id="${item.id}"] .add-to-cart`);
+            if (button) {
+                button.textContent = "Added to Cart";
+                button.style.backgroundColor = "gray";
+                button.style.color = "white";
+                button.disabled = true;
+            }
+            const productDescription = product.querySelector('.description').textContent; // Get the description
+
+        });
+    </script>
+</body>
+</html>
